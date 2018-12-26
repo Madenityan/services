@@ -1,0 +1,12 @@
+<section class="main">
+  <div class="wrapper">
+    <div class="products">
+      <div class="productsItem" *ngFor="let items of listItem">
+        <img class="productsItem__img" src="{{items.img}}" alt="img">
+        <div class="productsItem__subtitle">{{items.title}}</div>
+        <div class="productsItem__price" data-sale="100">Price:{{items.price}}</div>
+        <div class="productsItem__btn">Buy</div>
+      </div>
+    </div>
+  </div>
+</section>

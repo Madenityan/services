@@ -1,0 +1,40 @@
+.products {
+  display: flex;
+  margin-top: 30px;
+  text-align: center;
+
+  .productsItem {
+    margin-right: 20px;
+    background-color: #e1df9a;
+    padding: 10px;
+
+    &_subtitle {
+      margin-bottom: 15px;
+    }
+    &__price {
+      color: #3c8037;
+      margin: 15px 0;
+
+      &-sale {
+        font-size: 18px;
+      }
+        &::after {
+          content: attr(data-sale);
+          margin-left: 15px;
+          color: #ff340a;
+        }
+    }
+
+    &__btn {
+      background-color: gray;
+
+      &-loading {
+        background: #ddd;
+        cursor: wait;
+      }
+      &-done {
+        background: #3c8037;
+      }
+    }
+  }
+}
