@@ -1,0 +1,30 @@
+@import "../../assets/styles/_variables";
+
+@mixin myBorder($color, $width) {
+  border: {
+    color: $color;
+    width: $width;
+    style: dashed;
+  };
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin title {
+  font: {
+    family: Arial;
+    size: 17px;
+    weight: bold;
+  }
+  color: $green;
+}

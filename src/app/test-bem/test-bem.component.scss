@@ -1,19 +1,32 @@
+@import "../../assets/styles/_variables";
+@import "../../assets/styles/_mixins";
+
+%card-border {
+  border: 1px solid $light-grey;
+  padding: 5px;
+}
+
 .products {
-  display: flex;
+  @include flex;
   margin-top: 30px;
   text-align: center;
 
   .productsItem {
     margin-right: 20px;
-    background-color: #e1df9a;
+    background-color: $yellow;
     padding: 10px;
+    @extend %card-border;
+
+    @include border-radius(10px);
 
     &_subtitle {
       margin-bottom: 15px;
+      @include title;
     }
     &__price {
-      color: #3c8037;
+      color: $green;
       margin: 15px 0;
+      @extend %card-border;
 
       &-sale {
         font-size: 18px;
@@ -21,19 +34,20 @@
         &::after {
           content: attr(data-sale);
           margin-left: 15px;
-          color: #ff340a;
+          color: $red;
         }
     }
 
     &__btn {
-      background-color: gray;
+      background-color: $grey;
+      @include myBorder($red, 2px);
 
       &-loading {
-        background: #ddd;
+        background: $light-grey;
         cursor: wait;
       }
       &-done {
-        background: #3c8037;
+        background: $green;
       }
     }
   }
